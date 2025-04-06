@@ -1,0 +1,28 @@
+<%- include('layout', { title: 'Blog' }) %>
+
+<main class="blog-main">
+  <div class="container">
+    <header class="blog-header">
+      <h1 class="page-title">Latest Articles</h1>
+      <p class="page-subtitle">Insights and updates from our expert community</p>
+    </header>
+    
+    <div class="blog-grid">
+      <% blogs.forEach(blog => { %>
+        <article class="blog-card">
+          <div class="blog-card-content">
+            <h2 class="blog-title">
+              <a href="#"><%= blog.title %></a>
+            </h2>
+            <div class="blog-meta">
+              <span class="blog-author">By <%= blog.author %></span>
+              <span class="blog-date"><%= blog.date %></span>
+            </div>
+            <p class="blog-excerpt"><%= blog.content %></p>
+            <a href="#" class="read-more">Read more →</a>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  </div>
+</main>

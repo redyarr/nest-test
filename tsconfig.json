@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist", // Compiled files should go here
+    "rootDir": "./src", // Source files are here
+    "baseUrl": "./",
+    "incremental": false, // this created the issue of not craeting the dist
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*", "views/**/*"],
+  "exclude": ["node_modules"]
+}
